@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration page</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function node() {
+            var name = document.forms.myform.name.value;
+            var email = document.forms.myform.email.value;
+            var number = document.forms.myform.number.value;
+            if (name == "") {
+                window.alert("Please enter the name properly");
+                name.focus();
+                return false;
+            }
+            if (email == "") {
+                window.alert("Please enter the email properly");
+                email.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="struct">
+        <header class="upper">
+            <div class="upperheading">
+                <h1>Registration page</h1>
+                <p>Please fill the form</p>
+            </div>
+            <hr>
+        </header>
+        <div class="reg">
+            <form name="myform" onsubmit="return node()" method="post" class="form">
+                <label>First Name</label>
+                <input type="text" name="name" placeholder="Enter the first name">
+                <label>Last Name</label>
+                <input type="text" name="name" placeholder="Enter the last name">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Enter the email here">
+                <label>DOB</label>
+                <input type="date" placeholder="Enter the DOB">
+                <label>Phone number</label>
+                <input type="number" name="number" placeholder="Enter the mobile number">
+                <label>Mother's Name</label>
+                <input type="text" name="name" placeholder="Enter the Mother's name">
+                <label>Father's Name</label>
+                <input type="text" name="name" placeholder="Enter the Father's name">
+                <label>State</label>
+                <input type="text" name="name" placeholder="Enter the state">
+                <label>City</label>
+                <input type="text" name="name" placeholder="Enter the city">
+                <label>Address</label>
+                <input type="text" required placeholder="Enter the address">
+                <div class="submit">
+                    <hr>
+                    <p>By creating an account you agree to our <a href="#">Terms&Policy</a></p>
+                    <button type="button">Submit</button>
+                    <p>Thank You For filling our registration form.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
